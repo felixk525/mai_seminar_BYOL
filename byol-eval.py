@@ -29,7 +29,7 @@ transform = transforms.Compose([
     transforms.ToTensor(),
 ])
 
-# 3. Load  seperate labeled Dataset for evaluation
+# Load  seperate labeled Dataset for evaluation
 dataset = EuroSAT(root='.', download=True, transform=transform)
 dataloader = DataLoader(dataset, batch_size=32, shuffle=True, pin_memory=True, persistent_workers= True, num_workers=4)
 
